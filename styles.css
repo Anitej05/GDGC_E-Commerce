@@ -1,0 +1,363 @@
+/* Add to Cart Button Animation */
+.add-to-cart:active {
+    transform: scale(0.95);
+    transition: transform 0.1s ease;
+  }
+  
+  /* Shaking effect for individual cards (stronger, longer, dampened) */
+  @keyframes card-shake {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(0, -2px); } /* Reduced shake amount */
+    50% { transform: translate(0, 2px); }
+    75% { transform: translate(0, -2px); }
+    100% { transform: translate(0, 0); }
+  }
+  
+  .product-card.shake {
+    animation: card-shake 1.2s ease; /* Increased duration for longer shake */
+    animation-iteration-count: 2; /* 2 shake cycles */
+  }
+  
+  /* General styles */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Changed font */
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8; /* Softer background color */
+    min-height: 110vh; /* Slightly increase page height */
+    padding-bottom: 50px;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added shadow to header */
+  }
+  
+  /* Center the search bar */
+  .search-bar {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .search-bar input {
+    padding: 0.8rem;
+    width: 70%;
+    border: none;
+    border-radius: 20px 0 0 20px; /* Rounded corners */
+    transition: box-shadow 0.3s ease, width 0.3s ease; /* Added width transition */
+    font-size: 16px; /* Increased font size */
+    background-color: #f5f5f5; /* Slightly greyer background */
+  }
+  
+  .search-bar input:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+    width: 75%; /* Expand slightly on hover */
+  }
+  
+  .search-bar input:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 4px 8px rgba(0, 100, 200, 0.3); /* Blue focus shadow */
+  }
+  
+  .search-bar button {
+    padding: 0.8rem 1.5rem;
+    background-color: #f39c12; /* Orange button color */
+    color: white;
+    border: none;
+    border-radius: 0 20px 20px 0; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add transition for hover effect */
+    font-weight: bold; /* Bold text */
+    font-size: 16px; /* Increased font size */
+  }
+  
+  .search-bar button:hover {
+    background-color: #d35400; /* Darker orange on hover */
+  }
+  
+  .container {
+    padding: 2rem;
+    min-height: calc(100vh - 150px); /* Adjust as needed to accommodate header and footer */
+  }
+  
+  #product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Align last row to the left */
+    margin: -0.5rem;
+    padding: 0;
+  }
+  
+  /* Add more vertical gap between product cards */
+  .product-card {
+    width: calc(25% - 1rem);
+    padding: 0.5rem;
+    margin: 0.5rem 0 1.5rem; /* Increased bottom margin */
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    /* Remove initial box shadow from the .product-card */
+  }
+  
+  /* Apply box shadow to the .product-card-inner instead */
+  .product-card-inner {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Initial shadow */
+  }
+  
+  .product-card-inner:hover {
+    transform: scale(1.05); /* Scale up slightly on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* More pronounced shadow on hover */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1200px) {
+    .product-card {
+      width: calc(33.33% - 1rem);
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .product-card {
+      width: calc(50% - 1rem);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .product-card {
+      width: calc(100% - 1rem);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .product-card {
+      width: 100%;
+    }
+  }
+  
+  .product-image {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+  }
+  
+  .product-name {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  
+  .product-rating {
+    color: #f39c12;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+  
+  .product-price {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Add to Cart button styles */
+  .add-to-cart {
+    background-color: #2ecc71; /* Green button color */
+    color: white;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform transition */
+  }
+  
+  .add-to-cart:hover {
+    background-color: #27ae60; /* Darker green on hover */
+    transform: translateY(-2px); /* Lift up slightly on hover */
+  }
+  
+  .cart {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px 10px 0 0;
+    position: fixed; 
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+    /* Initial width for larger screens */
+    width: 80%; 
+    max-width: 850px; /* Maximum width to prevent it from getting too large */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10; 
+  }
+
+  .cart::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .cart {
+      width: 90%; /* Adjust width for medium screens */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .cart {
+      width: 95%; /* Adjust width for smaller screens */
+    }
+  }
+  
+  
+  .cart h2 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #cart-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  #cart-toggle.collapsed {
+    transform: rotate(180deg);
+  }
+  
+  #cart-content {
+    max-height: 400px;
+    overflow-y: auto;
+    transition: max-height 0.3s ease;
+  }
+  
+  #cart-content.collapsed {
+    max-height: 0;
+    overflow: hidden;
+  }
+  
+  #initial-cart-message {
+    text-align: center;
+    padding: 1rem;
+    font-style: italic;
+    color: #777;
+  }
+  
+  #cart-items {
+    margin-bottom: 1rem;
+  }
+  
+  .cart-item {
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .cart-item img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-right: 0.5rem;
+  }
+  
+  .cart-item-details {
+    flex: 1;
+    font-size: 0.9em;
+  }
+  
+  .cart-item-title {
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+  }
+  
+  .cart-item-quantity {
+    display: flex;
+    align-items: center;
+  }
+  
+  .cart-item-quantity button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 0.25rem;
+  }
+  
+  .delete-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 0.5rem;
+  }
+  
+  #price-details {
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    padding: 0.5rem;
+    width: 100%;
+    font-size: 0.9em;
+  }
+  
+  .price-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.25rem;
+  }
+  
+  .price-row.total {
+    font-weight: bold;
+    border-top: 1px solid #ddd;
+    padding-top: 0.25rem;
+    margin-top: 0.25rem;
+  }
+  
+  #place-order {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+  
+  button.hover {
+    background-color: #444;
+    transition: background-color 0.3s ease;
+  }
+  
+  button.active {
+    transform: scale(0.95);
+    transition: transform 0.1s ease;
+  }

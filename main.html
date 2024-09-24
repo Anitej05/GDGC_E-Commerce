@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce Platform</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>E-Commerce Platform</h1>
+  </header>
+
+  <div class="search-bar">
+    <input type="text" placeholder="Search products...">
+    <button>Search</button>
+  </div>
+
+  <div class="container">
+    <div id="product-grid" class="row">
+      <!-- Product cards will be dynamically inserted here -->
+    </div>
+  </div>
+
+  <div class="cart">
+    <h2>
+      Cart
+      <button id="cart-toggle">▼</button>
+    </h2>
+    <div id="cart-content">
+      <div id="initial-cart-message">
+        Add items to view the details of the purchases
+      </div>
+      <div id="cart-items">
+        <!-- Cart items will be dynamically inserted here -->
+      </div>
+      <div id="price-details">
+        <div class="price-row">
+          Total MRP <span id="total-mrp">₹0</span>
+        </div>
+        <div class="price-row">
+          Coupon Discount <span id="coupon-discount">-₹0</span>
+        </div>
+        <div class="price-row">
+          Platform Fee <span id="platform-fee">₹0</span>
+        </div>
+        <div class="price-row">
+          Shipping Charges <span id="shipping-charges">₹0</span>
+        </div>
+        <div class="price-row total">
+          Total Amount <span id="total-amount">₹0</span>
+        </div>
+      </div>
+      <button id="place-order">Place Order</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
