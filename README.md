@@ -4,6 +4,7 @@
 
 This project showcases a meticulously crafted e-commerce platform built using HTML, CSS, and JavaScript. It provides users with a seamless and engaging online shopping experience, allowing them to explore a diverse range of products, effortlessly manage their shopping cart, and proceed through a simulated checkout process. The platform leverages the FakeStoreAPI to populate its product catalog with realistic dummy data, enabling a comprehensive demonstration of its functionalities without the need for a backend database.
 
+![image](https://github.com/user-attachments/assets/5abe89f1-b0da-4efd-9fb0-505f07990886)
 <!-- **Screenshot: Homepage showcasing a visually appealing product grid and a prominent search bar**
 Description: Emphasize the clean and modern layout, highlighting the product grid's organization, the search bar's accessibility, and the intuitive cart icon. -->
 
@@ -15,6 +16,7 @@ Description: Emphasize the clean and modern layout, highlighting the product gri
 - **Responsive Layout:** The product grid seamlessly adapts to different screen sizes and orientations, ensuring a consistent and optimized browsing experience across desktops, tablets, and mobile devices. This responsiveness guarantees that users can explore products with ease regardless of their preferred device.
 - **Scroll-Triggered Card Animations:** To enhance user engagement, the platform incorporates subtle yet eye-catching animations that are triggered as users scroll through the product grid. These animations add a touch of dynamism and interactivity to the browsing experience, drawing attention to individual products and creating a more captivating visual journey.
 
+![image](https://github.com/user-attachments/assets/23f432ca-1106-41dc-91f9-893c1b746070)
 
 <!-- **Screenshot: Close-up of a product card with hover effects**
 Description: Showcase the zoom or other hover effects on product cards, highlighting the detailed product information displayed upon hovering. -->
@@ -30,6 +32,7 @@ Description: Showcase the zoom or other hover effects on product cards, highligh
 - **Dynamic Cart Updates:** The platform's cart management system is meticulously designed to provide a smooth and intuitive user experience. As items are added or removed from the cart, the cart's contents and associated price details are dynamically updated in real-time, ensuring that users always have an accurate view of their shopping progress.
 - **Quantity Adjustments and Item Removal:** Users have complete control over their cart's contents, with the ability to easily adjust item quantities or remove unwanted items from their cart before proceeding to checkout.
 
+![image](https://github.com/user-attachments/assets/eb337bea-7e2f-43c6-90b5-3ed39805f8e9)
 
 <!-- **Screenshot: Cart with multiple items, demonstrating quantity adjustments and item removal options**
 Description: Show the cart with added items, quantity controls, and price details, emphasizing the ease of managing cart contents. -->
