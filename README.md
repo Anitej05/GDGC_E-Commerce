@@ -26,6 +26,8 @@ Description: Showcase the zoom or other hover effects on product cards, highligh
 - **Intuitive Search Bar:** A prominent search bar is strategically positioned at the top of the page, inviting users to quickly and easily find specific products within the platform's extensive catalog. 
 - **Real-Time Search Filtering:** As users type their search query into the search bar, the product grid dynamically updates in real time, displaying only the products that match the entered keywords. This instant feedback streamlines the search process and allows users to efficiently refine their product discovery.
 
+![image](https://github.com/user-attachments/assets/c81fd3b1-9e7f-4657-b073-7b2c9ecf6be8)
+
 ### 3. Seamless Cart Management:
 
 - **Add to Cart Functionality:** Each product card features a user-friendly "Add to Cart" button that enables users to effortlessly add desired items to their shopping cart with a single click. 
